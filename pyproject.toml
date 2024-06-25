@@ -81,9 +81,10 @@ exclude = [
     "staticfiles/*"
 ]
 # Same as Django: https://github.com/cookiecutter/cookiecutter-django/issues/4792.
-line-length = 88
+line-length = 120
 indent-width = 4
 target-version = "py312"
+ignore = ["COM812", "ISC001"]
 
 [tool.ruff.lint]
 select = [
