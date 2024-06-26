@@ -1,4 +1,5 @@
 # ruff: noqa
+from os import name
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -40,6 +41,8 @@ urlpatterns += [
         SpectacularSwaggerView.as_view(url_name="api-schema"),
         name="api-docs",
     ),
+    # Custom API urls
+    path("api/", include("case_study.corporations.urls", namespace="corporations")),
 ]
 
 if settings.DEBUG:
